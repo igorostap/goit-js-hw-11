@@ -38,7 +38,7 @@ function onSearch(e) {
   if (imgList.data.totalHits === 0) {
     btnLoad.classList.add('is-hidden');
     Notiflix.Notify.failure('Sorry, there are no images matching your search query. Please try again.');
-  } if (pageNum >= imgList.data.totalHits/40 && imgList.data.totalHits!=0 ) {
+  } if (pageNum > (imgList.data.totalHits/40+1) && imgList.data.totalHits!=0 ) {
      
       Notiflix.Notify.info("We're sorry, but you've reached the end of search results.");
     btnLoad.classList.add('is-hidden');
